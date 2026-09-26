@@ -1,0 +1,58 @@
+# Python bytecode/cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE/editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and runtime outputs
+*.log
+*.pid
+logs/
+runs/
+outputs/
+wandb/
+/result.txt
+/result_AET.txt
+
+# Model/data artifacts
+*.ckpt
+*.pth
+*.pt
+*.onnx
+*.npy
+*.npz
+
+# Project-specific large/generated directories
+/ALBEF/
+/BLIP/
+/attack/
+/checkpoints/
+/datasets/
+/clear_files/
+/LLMs/
+
+# Local/generated files
+/.trae/
+/.codemap/
+/filter.py
