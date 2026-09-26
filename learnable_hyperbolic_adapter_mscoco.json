@@ -1,0 +1,51 @@
+{
+  "source_model": "CLIP_ViT",
+  "adapter_train_data": "mscoco_train",
+  "adapter_train_objective": "clean_ranking_logmeanexp",
+  "train_file": "./data_annotation/coco_karpathy_train.json",
+  "image_root": "/home/data/share_data/multimodal/datasets/coco/",
+  "feature_layers": [
+    "transformer.resblocks.2",
+    "transformer.resblocks.5",
+    "transformer.resblocks.8",
+    "transformer.resblocks.11"
+  ],
+  "latest_stats": {
+    "hyperbolic_loss_type": "ranking_logmeanexp",
+    "ranking_temperature": 0.1,
+    "hard_negative_topk": 5,
+    "valid_ranking_images": 32,
+    "positive_caption_distance_mean": 0.6006956100463867,
+    "positive_caption_score_mean": -0.6006956100463867,
+    "negative_caption_distance_mean": 1.41343355178833,
+    "negative_caption_score_mean": -1.41343355178833,
+    "ranking_margin_mean": -0.8127379417419434,
+    "loss_role": "adapter_clean_hyperbolic_ranking",
+    "epoch": 1,
+    "epochs": 5,
+    "batch_index": 5100,
+    "batches_per_epoch": 17711,
+    "global_step": 5100,
+    "total_steps": 88555,
+    "lr": 9.919201354705949e-05,
+    "elapsed_seconds": 1506.3465831279755,
+    "eta_seconds": 24649.441979401017,
+    "batch_size": 32,
+    "num_texts": 32,
+    "L_adapter_train": -5.85906457901001,
+    "L_clean_ranking": -5.85906457901001,
+    "L_radius_order": 0.0,
+    "L_clip_distill": 0.0
+  },
+  "early_stop": {
+    "enabled": true,
+    "monitor": "L_clean_ranking",
+    "mode": "min",
+    "best_value": -6.763503074645996,
+    "best_step": 4100,
+    "stop_reason": "early_stop: L_clean_ranking did not improve by min_delta=0.001 for 50 checks after best_step=4100."
+  },
+  "uses_test_split": false,
+  "uses_target_model_gradient": false,
+  "uses_target_model_feedback": false
+}
